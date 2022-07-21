@@ -28,8 +28,7 @@ function App() {
           </ul>
         </nav>
       </div>
-      {/* define Route and component that will 
-      render if the URL match by using Switch */}
+
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
