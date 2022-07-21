@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div>
-        {/* Setup navigation element */}
+
         <nav>
           <ul>
             <li>
