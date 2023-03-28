@@ -1,4 +1,5 @@
 // import css bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // import styles.css
 import "./styles/styles.css";
@@ -10,7 +11,7 @@ function App() {
   return (
     // code inside div
     <div>
-      <Form />      
+      <Form />
     </div>
   );
 }

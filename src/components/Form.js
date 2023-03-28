@@ -1,4 +1,5 @@
 // import React Bootstrap components
+import { Button } from "react-bootstrap";
 
 // import css modules
 import cssModules from "./Form.module.css";
@@ -26,7 +27,6 @@ const styles = {
     borderRadius: ".25rem",
   },
 };
-
 
 function FormComponent() {
   return (
@@ -65,10 +65,10 @@ function FormComponent() {
           </select>
         </div>
         {/* code here */}
-
+        <Button>Submit</Button>
       </form>
     </div>
-  )
+  );
 }
 
-export default FormComponent
+export default FormComponent;
