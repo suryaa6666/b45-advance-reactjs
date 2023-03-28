@@ -1,17 +1,23 @@
-// import necessary react-bootstrap component 
+// import necessary react-bootstrap component
 import { Container } from "react-bootstrap";
-
+import { Link, useNavigate } from "react-router-dom";
 // import hooks from react-router-dom here
 
 function Home() {
-
+  const navigate = useNavigate();
   // call that hooks here and store to variable
 
   // create function here for handle push to another pages
+  function transitionWithTime() {
+    setTimeout(() => {
+      navigate("/about");
+    }, 3000);
+  }
 
   return (
     <Container className="text-center">
       <p className="h1">Home</p>
+      <Link to={"/about"}>About</Link>
       <p>
         Cras sit amet mauris ac urna pellentesque rhoncus sed nec felis. Sed
         augue tortor, pretium euismod massa eu, fringilla viverra ante. Proin ut
@@ -23,6 +29,7 @@ function Home() {
         amet hendrerit augue.
       </p>
       {/* code element here */}
+      <button onClick={transitionWithTime}>Click saya</button>
     </Container>
   );
 }

@@ -1,11 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // import necessary object from react-router-dom
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 // import our "pages" component
-import Home from "./pages/Home";
 import About from "./pages/About";
+import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 
@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <div>
-
         <nav>
           <ul>
             <li>
