@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap";
 
-function Home() {
+function Home(props) {
   return (
     <Container className="text-center">
-      <p className="h1">Home</p>
+      <p className="h1">{props.getParaText}</p>
       <p>
         Cras sit amet mauris ac urna pellentesque rhoncus sed nec felis. Sed
         augue tortor, pretium euismod massa eu, fringilla viverra ante. Proin ut
