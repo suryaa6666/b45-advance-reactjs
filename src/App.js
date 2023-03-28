@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
+import DetailUser from "./pages/DetailUser";
 // import component here
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/signin" element={<SignIn />} />
+        <Route exact path="/detail/:robert" element={<DetailUser />} />
         {/* define new route */}
       </Routes>
     </Router>
