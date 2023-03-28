@@ -9,6 +9,7 @@ import SignIn from "./pages/SignIn";
 import DetailUser from "./pages/DetailUser";
 
 import PrivateRoute from "./components/PrivateRoute";
+import DetailAbout from "./components/DetailAbout";
 
 function App() {
   return (
@@ -31,6 +32,11 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/signin" element={<SignIn />} />
+        <Route
+          exact
+          path="/detail-about"
+          element={<DetailAbout name={"123123"} />}
+        />
         {/* protect this routes with <PrivateRoute> */}
         <Route exact path="/" element={<PrivateRoute />}>
           <Route exact path="/about" element={<About />} />
