@@ -1,43 +1,18 @@
 // import css modules
 import cssModules from "./Form.module.css";
 
-const styles = {
-  form: {
-    margin: "16px 20% 0",
-  },
-  formGroup: {
-    marginBottom: "16px",
-  },
-  formLabel: {
-    marginBottom: "8px",
-    display: "inline-block",
-  },
-  formInput: {
-    display: "block",
-    width: "100%",
-    padding: ".375rem .75rem",
-    fontSize: "1rem",
-    lineHeight: 1.5,
-    color: "#212529",
-    backgroundColor: "#fff",
-    border: "1px solid #ced4da",
-    borderRadius: ".25rem",
-  },
-};
-
-
 function Form() {
   return (
     <div>
-      <form style={styles.form}>
-        <div style={styles.formGroup}>
-          <label htmlFor="username" style={styles.formLabel}>
+      <form className="form">
+        <div className="formGroup">
+          <label htmlFor="username" className="formLabel">
             Username
           </label>
           <input
             id="username"
             placeholder="Input username"
-            style={styles.formInput}
+            className="formInput"
           />
         </div>
         <div className={cssModules.formGroup}>
@@ -54,7 +29,7 @@ function Form() {
         {/* code here */}
       </form>
     </div>
-  )
+  );
 }
 
-export default Form
+export default Form;
