@@ -7,9 +7,13 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import DetailUser from "./pages/DetailUser";
+import PrivateRoute from "./components/PrivateRoute";
+import { useState } from "react";
 // import component here
 
 function App() {
+  const [isLogin, setIsLogin] = useState(false);
+
   return (
     <Router>
       <div>
@@ -24,12 +28,24 @@ function App() {
             <li>
               <Link to="/profile">Profile</Link>
             </li>
+            <li>
+              <Link to="/signin">Signin</Link>
+            </li>
           </ul>
         </nav>
       </div>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/signin" element={<SignIn />} />
+        <Route
+          exact
+          path="/signin"
+          element={<SignIn setIsLogin={setIsLogin} />}
+        />
+        <Route element={<PrivateRoute isLogin={isLogin} />}>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/transaction" element={<Profile />} />
+          <Route path="/create-product" element={<Profile />} />
+        </Route>
         {/* change route for page about, profile, and user:id to private route */}
       </Routes>
     </Router>
